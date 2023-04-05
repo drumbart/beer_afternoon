@@ -1,29 +1,15 @@
+import 'package:beer_afternoon/app.dart';
+import 'package:beer_repository/beer_repository.dart';
+import 'package:bloc/bloc.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import 'bloc_observer.dart';
+
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Beer afternoon!',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+  WidgetsFlutterBinding.ensureInitialized();
+  if (kDebugMode) {
+    Bloc.observer = const AppBlocObserver();
   }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
+  runApp(BeerAfternoonApp(beerRepository: BeerRepository()));
 }
