@@ -1,0 +1,18 @@
+{
+  "beerAfternoon": "Beer afternoon!",
+  "grabMeAColdOne": "Grab me a cold one",
+  "iFoundSomethingForYou": "I found something for you",
+  "details": "Details",
+  "iWantSomethingElse": "I'd like something else",
+  "errorFetchingBeer": "There was an error fetching your beer :(",
+  "tryAgain": "Try again",
+  "name": "Name",
+  "brand": "Brand",
+  "style": "Style",
+  "hop": "Hop",
+  "yeast": "Yeast",
+  "malts": "Malts",
+  "ibu": "Ibu",
+  "alcohol": "Alcohol",
+  "blg": "Blg"
+}
